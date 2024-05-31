@@ -285,39 +285,39 @@ button:hover,
 
 /* Frames - masked layers */
 .frame-wayfarer .product-image_frame {
-     -webkit-mask-image: url('./images/masks/sunnies-standard.svg');
-    mask-image: url('./images/masks/sunnies-standard.svg');
+     -webkit-mask-image: url('../images/masks/sunnies-standard.svg');
+    mask-image: url('../images/masks/sunnies-standard.svg');
 }
 .frame-wayfarer .product-image_lenses {
-    -webkit-mask-image: url('./images/masks/sunnies-standard-lenses.svg');
-    mask-image: url('./images/masks/sunnies-standard-lenses.svg');
+    -webkit-mask-image: url('../images/masks/sunnies-standard-lenses.svg');
+    mask-image: url('../images/masks/sunnies-standard-lenses.svg');
 }
 
 .frame-half .product-image_frame {
      -webkit-mask-image: url('./images/masks/sunnies-half.svg');
-    mask-image: url('./images/masks/sunnies-half.svg');
+    mask-image: url('../images/masks/sunnies-half.svg');
 }
 .frame-half .product-image_lenses {
-    -webkit-mask-image: url('./images/masks/sunnies-half-lenses.svg');
-    mask-image: url('./images/masks/sunnies-half-lenses.svg');
+    -webkit-mask-image: url('../images/masks/sunnies-half-lenses.svg');
+    mask-image: url('../images/masks/sunnies-half-lenses.svg');
 }
 
 .frame-round .product-image_frame {
-     -webkit-mask-image: url('./images/masks/sunnies-round.svg');
-    mask-image: url('./images/masks/sunnies-round.svg');
+     -webkit-mask-image: url('../images/masks/sunnies-round.svg');
+    mask-image: url('../images/masks/sunnies-round.svg');
 }
 .frame-round .product-image_lenses {
-    -webkit-mask-image: url('./images/masks/sunnies-round-lenses.svg');
-    mask-image: url('./images/masks/sunnies-round-lenses.svg');
+    -webkit-mask-image: url('../images/masks/sunnies-round-lenses.svg');
+    mask-image: url('../images/masks/sunnies-round-lenses.svg');
 }
 
 .frame-aviator .product-image_frame {
-     -webkit-mask-image: url('./images/masks/sunnies-aviator.svg');
-    mask-image: url('./images/masks/sunnies-aviator.svg');
+     -webkit-mask-image: url('../images/masks/sunnies-aviator.svg');
+    mask-image: url('../images/masks/sunnies-aviator.svg');
 }
 .frame-aviator .product-image_lenses {
-    -webkit-mask-image: url('./images/masks/sunnies-aviator-lenses.svg');
-    mask-image: url('./images/masks/sunnies-aviator-lenses.svg');
+    -webkit-mask-image: url('../images/masks/sunnies-aviator-lenses.svg');
+    mask-image: url('../images/masks/sunnies-aviator-lenses.svg');
 }
 
 /* colours */
