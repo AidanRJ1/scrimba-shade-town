@@ -63,7 +63,7 @@ export const sunglasses = {
     model: {
         name: "aviator",
         price: 300,
-        thumbImg: "../images/thumb-aviator.png",
+        thumbImg: "thumb-aviator.png",
         cssClass: "frame-aviator",
     },
     lenses: {

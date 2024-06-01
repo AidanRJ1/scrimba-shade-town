@@ -12,42 +12,25 @@ function setSunglasses(sunglassesNew = sunglasses) {
 }
 
 function render(sunglassesNew) {
-    
-    sunglassesNew = {
-        model: {
-            name: sunglassesNew.model.name,
-            price: sunglassesNew.model.price,
-            thumbImg: sunglassesNew.model.thumbImg,
-            cssClass: sunglassesNew.model.cssClass,
-        },
-        lenses: {
-            color: sunglassesNew.lenses.color,
-            price: sunglassesNew.lenses.price,
-            cssClass: sunglassesNew.lenses.cssClass,
-        },
-        frame: {
-            color: sunglassesNew.frame.color,
-            price: sunglassesNew.frame.price,
-            cssClass: sunglassesNew.frame.cssClass,
-        }     
-    }
-    const price = "$" + (sunglassesNew.model.price + sunglassesNew.lenses.price + sunglassesNew.frame.price)
+    const { model, lenses, frame } = sunglassesNew;
+
+    const price = "$" + (model.price + lenses.price + frame.price)
     
   
     productDetailsEl.innerHTML = `
-    <h1>${sunglassesNew.model.name}</h1>
-    <p>Custom: ${sunglassesNew.lenses.color} lenses, ${sunglassesNew.frame.color} frames</p>
+    <h1>${model.name}</h1>
+    <p>Custom: ${lenses.color} lenses, ${frame.color} frames</p>
     <p>${price}</p>
     `;
     
     const currClass = productImage.classList[1]
-    productImage.classList.replace(currClass, sunglassesNew.model.cssClass)
+    productImage.classList.replace(currClass, model.cssClass)
     
     const currFramesClass = productFrames.classList[1]
-    productFrames.classList.replace(currFramesClass, sunglassesNew.frame.cssClass)
+    productFrames.classList.replace(currFramesClass, frame.cssClass)
     
     const currLensesClass = productLenses.classList[1]
-    productLenses.classList.replace(currLensesClass, sunglassesNew.lenses.cssClass)
+    productLenses.classList.replace(currLensesClass, lenses.cssClass)
     
 }
 
@@ -66,7 +49,7 @@ function addHighlight(clickedItem) {
 }
 
 
-document.body.addEventListener("click", function(event) {
+document.body.addEventListener("click", (event) => {
     const clickedItem = event.target
     //if sunglassesNew defined take variable from updates 
         //else use original sunglasses object
@@ -80,30 +63,21 @@ document.body.addEventListener("click", function(event) {
         const currName = clickedItem.dataset.name
 
         const modelOptions = sunglassesOptions.models
-        .filter((item) => item.name === currName)[0]
+        .filter((item) => item.name === currName)[0] 
         
         const name = modelOptions.name
         const price = modelOptions.price
         const thumbImg = modelOptions.thumbImg
         const cssClass = modelOptions.cssClass
-        
+
         sunglassesNew = {
+            ...sunglassesNew,
             model: {
                 name: name,
                 price: price,
-                thumbImg: sunglassesNew.model.thumbImg,
+                thumbImg: thumbImg,
                 cssClass: cssClass,
-            },
-            lenses: {
-                color: sunglassesNew.lenses.color,
-                price: sunglassesNew.lenses.price,
-                cssClass: sunglassesNew.lenses.cssClass,
-            },
-            frame: {
-                color: sunglassesNew.frame.color,
-                price: sunglassesNew.frame.price,
-                cssClass: sunglassesNew.frame.cssClass,
-            }     
+            }
         }
        
         addHighlight(clickedItem)
@@ -126,22 +100,12 @@ document.body.addEventListener("click", function(event) {
             const cssClass = colorOptions.cssClass
         
             sunglassesNew = {
-                model: {
-                    name: sunglassesNew.model.name,
-                    price: sunglassesNew.model.price,
-                    thumbImg: sunglassesNew.model.price,
-                    cssClass: sunglassesNew.model.cssClass,
-                },
+                ...sunglassesNew,
                 lenses: {
                     color: color,
                     price: price,
                     cssClass: cssClass,
                 },
-                frame: {
-                    color: sunglassesNew.frame.color,
-                    price: sunglassesNew.frame.price,
-                    cssClass: sunglassesNew.frame.cssClass,
-                }     
             }
         } 
         
@@ -155,17 +119,7 @@ document.body.addEventListener("click", function(event) {
             const cssClass = colorOptions.cssClass
             
             sunglassesNew = {
-                model: {
-                    name: sunglassesNew.model.name,
-                    price: sunglassesNew.model.price,
-                    thumbImg: sunglassesNew.model.price,
-                    cssClass: sunglassesNew.model.cssClass,
-                },
-                lenses: {
-                    color: sunglassesNew.lenses.color,
-                    price: sunglassesNew.lenses.price,
-                    cssClass: sunglassesNew.lenses.cssClass,
-                },
+                ...sunglassesNew,
                 frame: {
                     color: color,
                     price: price,
